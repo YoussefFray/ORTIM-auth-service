@@ -27,6 +27,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)  // Disable CSRF protection
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/auth/login", "/api/v1/auth/register").permitAll()  // Public endpoints
+                        .requestMatchers("/api/v1/users/**").hasRole("USER")  // Allow only users with "USER" role
                         .anyRequest().authenticated()  // All other requests need authentication
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))  // Set stateless session management
