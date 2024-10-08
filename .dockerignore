@@ -1,0 +1,52 @@
+# Exclude target directories, except for jar files
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!target/*.jar
+
+# Maven specific files
+.mvn/
+pom.xml.*
+
+# STS specific files (Spring Tool Suite)
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA specific files
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans specific files
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Exclude build directories
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code specific files
+.vscode/
+
+# Exclude logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Exclude Docker-related files if unnecessary in the image
+Dockerfile
+docker-compose.yml
+README.md
+HELP.md
+
+# Exclude sensitive or local environment configuration files
+.env
