@@ -8,6 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface PermissionRepository extends JpaRepository<Permission, UUID> {
-    // You can add custom query methods here if needed
+   
 }
 

@@ -34,7 +34,7 @@ public class User implements UserDetails {
     private String name;
 
     @Column(nullable = false, length = 255)
-    private String role; // Could be a string or a relationship to Role entity
+    private String role; 
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
@@ -65,21 +65,21 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true; // Implement your custom logic if necessary
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true; // Implement your custom logic if necessary
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true; // Implement your custom logic if necessary
+        return true; 
     }
 
     @Override
     public boolean isEnabled() {
-        return status.equalsIgnoreCase("active"); // Check if the user is active
+        return status.equalsIgnoreCase("active"); 
     }
 }
